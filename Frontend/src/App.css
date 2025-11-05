@@ -1,0 +1,11 @@
+.bg-light-theme {
+  background-image: url('./assets/bg.avif');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-dark-theme {
+  background-image: url('./assets/dark-bg.webp');
+  background-size: cover;
+  background-position: center;
+}
