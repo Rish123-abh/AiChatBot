@@ -8,11 +8,7 @@ import messageRoutes from './routes/messageRoutes';
 
 
 const port:number= Number(process.env.PORT) || 5000;
-app.use(cors({
-  origin:process.env.FRONTEND_URL,
-  credentials:true
-}));
-app.use(express.json());
+
 
 app.use('/api/message',messageRoutes); 
 

@@ -4,10 +4,16 @@ import express from "express";
 import fetch from "node-fetch";
 import dotenv from "dotenv";
 import Message from "./models/message.model";
+import cors from 'cors';
 dotenv.config();
 const app = express();
 console.log("GROQ KEY:", process.env.GROQ_API_KEY);
+app.use(cors({
+  origin: process.env.FRONTEND_URL,
+  credentials: true
+}));
 
+app.use(express.json());
 interface UserMessagePayload {
   userId: string;
   message: string;
